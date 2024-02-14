@@ -1,0 +1,243 @@
+
+body{
+    margin: 0;
+    padding: 0px;
+    font-family: poppins;
+}
+.signUpmaindiv{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #000000;
+
+}
+
+.rightSide{
+/* 
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ color: white;
+ width: 1000px; */
+ /* margin-top: 1000px; */
+ overflow-y:scroll;
+ /* height: 100vh; */
+ max-height: 100vh;
+  
+}
+
+.leftSide{
+  /* position: sticky; */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column; 
+    width: 1000px;
+    /* height: 100vh; */
+    background-image: url(E:\React\reset-app\src\Pictures\pexels-ketut-subiyanto-5037345.jpg);
+    background-size: cover;
+}
+
+.Bill{
+    font-weight:600;
+    color: #98a7c3;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.firstCardPara{
+    color: #8d9dbc;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+}
+.stepone{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #ff7565;
+}
+
+.stepOneHeading{  
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+
+.selectplan{
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 32px;
+    vertical-align: baseline;
+    font-weight: 700;
+}
+
+.steponeFirstCard {
+    word-spacing: 3px;
+    line-height: lower;
+    width: 300px;
+    height: auto;
+    margin: 20px auto; 
+    padding: 20px;
+    border-radius: 30px;
+    border: 3px solid rgb(176, 67, 67);
+    box-shadow: 0 0 10px rgb(176, 67, 67);
+  }
+
+  .horizontal-line {
+    border-top: 1px solid #ccc; 
+    margin-top: 20px;
+  }
+  
+  .minicardsMainDiv {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+}
+
+  
+  .miniCard {
+    display: inline-block;
+    margin: 10px;
+    border-radius: 30px;
+    border: 1px solid rgb(176, 67, 67);
+    /* box-shadow: 0 0 10px rgb(176, 67, 67); */
+    background-image: url(E:\React\reset-app\src\Pictures\Login-page-imagr.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 90px; 
+    padding: 6px;
+  }
+
+ 
+  .miniCard p{
+    font-size:x-small;
+    font-weight: 400;
+    margin-bottom: -10px;
+}
+
+
+  .fontFlex{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -35px;
+    margin-top: -10px;
+  }
+
+.fontFlexlast  {display: flex;
+flex-direction: row;
+margin-bottom: -10px;
+margin-top: -20px;
+}
+  
+  .fontRecommened{
+      margin-top: 18px;
+      margin-right: 10px;
+      color:#fff;
+      border-radius: 10px;
+    }
+    
+    .font{
+      margin-top: 22px;
+      margin-right: 8px;
+      color:#fff;
+  
+    }
+ .recommended{
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+ }
+
+.WelcomeLink{
+text-shadow: 5px 5px 8px #000000;
+color: rgb(255, 255, 255);
+font-size: 50px;
+margin-left: 100px;
+font-weight: bolder;
+}
+
+.toReset {
+    text-decoration: none;
+    color: #201111;
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: 20px 20px 25px #fff;
+    font-size: 100px;
+    margin-left: 120px;
+
+}
+
+
+
+.SignupmainHeading{
+    color:rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 1200px;
+   font-family: poppins;
+}
+
+
+.signupPara{
+   color: #8d9dbc;
+   font-size: 16px;
+    font-weight: 600;
+}
+
+
+.Annual{
+    /* margin-top: -20px; */
+    color: #ffffff;
+    font-size: 14px;
+   line-height: 18px;
+    vertical-align: baseline;
+    font-weight: 800;
+
+}
+
+
+.signupForm input {
+    background-color: #161626;
+    color:#98a7c3;
+    padding: 20px;
+    width: 300px;
+    border-radius: 20px;
+    border:none;
+    display: block;
+    margin: 10px;
+}
+
+
+
+.signupSubmitbtn{
+    background-color: #ff7565;
+    color: white;
+    border: none;
+    width: 320px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    /* margin-left: -100px; */
+
+}
+
+/* .div1,
+.div2 {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+} */

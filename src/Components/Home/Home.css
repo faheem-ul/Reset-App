@@ -1,0 +1,160 @@
+
+
+body{
+    background-color: #fff;
+    font-family: poppins;
+}
+.Navbar{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    justify-content: baseline;
+}
+.NavbarLeft, .NavbarRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavbarLeft{
+    margin-right: 780px;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#ccc;
+   
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #333;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: black;
+  }
+
+   .slider.round {
+    border-radius: 34px;
+  } 
+  
+  .slider.round:before {
+    border-radius: 50%;
+  } 
+
+  .darkmode{
+     background-color: #213547;
+     color: #ffffff;
+     font-size: 20px;
+     font-weight: bold;
+     padding: 10px;
+     border-radius: 10px;
+     margin: 10px 
+  }
+
+.support{
+
+    margin-right: 150px;
+    font-size: 16px;
+    font-weight: 500;
+    color:#ffffff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.HomeSection{
+    margin: 0px;
+    background-image: url(E:\React\reset-app\src\Pictures\home-cover-photo.jpg);
+    background-size: cover;
+    
+}
+
+.HomeContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: -60px;
+}
+
+.HomeMainHeading{
+    width: 700px;
+    color:#ffffff;
+    line-height:112px;
+    font-weight:800;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5); 
+    font-size: 100px;;
+
+}
+
+/* .HomeMainContent{
+    font-size: xxx-large;
+    font-weight: bolder;
+} */
+
+.homeparaSpan{
+    font-weight: bolder;  
+}
+
+.homepara{
+    margin-top: -60px;
+    margin-left: -80px;
+    color:#ffffff;
+    text-shadow: 3px 3px 3px rgba(1, 1, 1, 0.5); 
+    font-weight: 400;
+}
+
+
+.HomeClaimButton, .HomeloginButton{
+    background-color:#ff7565;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-left: -100px; 
+}
+
+ .HomeloginButton{
+ padding:12px ;
+width: 200px;
+}
+
+
+

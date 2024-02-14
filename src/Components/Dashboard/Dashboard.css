@@ -1,0 +1,234 @@
+/* .dashboard {
+    background-color: #000000;
+} */
+body{
+    background-color: #000000;
+    font-family: poppins;
+}
+
+.Navbar{
+    margin: 0px 150px 0px 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    margin-top: 20px;
+    color:#ff7565;
+    font-size: 40px;
+    
+}
+
+.logoutBtn{
+    background-color: #000000;
+    color:#ffffff;
+    margin-top: 30px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+    /* margin-left: -100px; */
+}
+
+.dashboardMainDiv {
+    margin-top: 0px;
+    text-align: center;
+
+}
+
+
+.imageInputDiv {
+    /* text-align: center; */
+    position: relative; 
+}
+
+.uploadButton {
+    width: 50px;
+    height: 50px;
+    background-color: grey;
+    color: #fff;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 100%;
+    font-size: 25px;
+    display: inline-block;
+    position: relative; 
+}
+
+
+#imageinput {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.addIcon{
+    font-size: 20px;
+    border-radius: 100%;
+    margin-left:40px ;
+    /* margin-left: 16px; */
+    background-color: #ff7565;
+    color: #fff;
+}
+
+.WelcomeTrial{
+    color:#1e2534;
+    font-size:20px;
+    line-height:28px;
+    font-weight: 600px;
+}
+
+.downloadTheApp{
+    color:#8d9dbc;
+    line-height:20px;
+    width: 400px;
+    font-size: 13px; 
+}
+
+.downloadTheAppDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.AndroidIosBtnDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.iosButton, .androidButton{
+    background-color: #ff7565;
+    color: white;
+    border: none;
+    width: 130px;
+    margin: 10px;
+    border-radius: 10px;
+    height: 50px;
+    font-size:9px;
+    cursor: pointer;
+}
+
+.iosFont{
+    font-size: x-large;
+}
+
+.androidFont{
+    font-size: large;
+}
+.fontspan{
+    display: block;
+    font-size: large;
+    font-weight: 600;
+}
+
+.fontspanandroid{
+    margin-top: 5px;
+    display: block;
+    font-size: large;
+    font-weight: 600;
+}
+
+.ProfileandPaymentDivsFlex, .AccountandPlanDivsFelx{
+    display:flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* .cardsmainDiv{
+    display: flex;
+   flex-wrap:wrap;
+   margin: 50px;
+   justify-content: space-around;
+   align-items: center;
+} */
+
+.Heading{
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+}
+
+.AccountDiv, .ProfileDiv, .PaymentDiv, .PlanDiv{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    /* font-weight: 700; */
+}
+.PlanDiv{
+    margin-bottom: 110px;
+}
+
+.Accountedit, .ProfileEdit, .PaymentEdit, .PlanEdit{
+    background-color: #000000;
+  color: #ff7565;
+    border: none;
+    margin-left: 120px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+       font-weight: 700
+}
+
+.Accountedit{
+    margin-left: 150px;
+}
+.ProfileEdit{
+    margin-left: 220px;
+}
+
+.PaymentEdit{
+    margin-left: 90px;
+}
+
+.PlanEdit{
+    margin-left: 200px;
+}
+
+.Payment, .MyAccount, .Myplan, .Profile {
+    font-weight: 700;
+}
+
+.PaymentDetails, .ProfileDetails, .AccountDetails, .PlanDetails{
+    width: 400px;
+    height: 300px;
+    background-color: #161626;
+    text-align: start;
+    color:#ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.AccountDetails{
+    height: 140px;
+}
+
+.PlanDetails{
+    height: 80px;
+}
+
+.cardNmbr, .paymentMethod, .ExpiryDate, .Email, .Age, .Height, .Weight, .Goal{
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+
+.PlanSpan{
+    color: #ff7565;
+}
+
+.horizontalLine{
+    border-top: 1px solid #ccc; 
+    width: 380px;
+    margin-left: 20px;
+}
