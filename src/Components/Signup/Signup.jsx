@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { Toaster, toast } from "react-hot-toast";
+import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
@@ -14,24 +16,56 @@ function Signup() {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-  const handleSignupSubmit = () => {
-    const newUser = {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: password,
-    };
+  const formValidate = () => {
+    if (
+      firstName === "" ||
+      lastName === "" ||
+      email === "" ||
+      password === "" ||
+      password.length < 8
+    ) {
+      toast.error("Please fill in all fields");
+    } else {
+      axios
+        .get(`http://localhost:3000/Signups?email=${email}`)
+        .then((response) => {
+          console.log(response.data);
+          if (response.data.length > 0) {
+            alert("Email already exists. Please use a different email.");
+          } else {
+            const newUser = {
+              firstName: firstName,
+              lastName: lastName,
+              email: email,
+              password: password,
+            };
 
-    axios
-      .post("http://localhost:3000/Signups", newUser)
-      .then((response) => {
-        console.log("a new user added in the json server", response);
-      })
-      .catch((error) => {
-        console.log("error adding a new user in the json server", error);
-      });
-    navigate("/dashboard");
+            axios
+              .post("http://localhost:3000/Signups", newUser)
+              .then((response) => {
+                console.log("A new user added in the JSON server", response);
+                navigate("/dashboard");
+              })
+              .catch((error) => {
+                console.log(
+                  "Error adding a new user in the JSON server",
+                  error
+                );
+              });
+          }
+        })
+        .catch((error) => {
+          console.log(
+            "Error checking email existence in the JSON server",
+            error
+          );
+        });
+    }
   };
+
+  // const handleSignupSubmit = () => {
+
+  // };
 
   const handleSignupFirstname = (e) => {
     setFirstName(e.target.value);
@@ -216,7 +250,7 @@ function Signup() {
             <div className="SignupHeadingDiv">
               <h1>Create Your Account</h1>
             </div>
-            <form onSubmit={handleSignupSubmit} className="signupForm">
+            <form className="signupForm">
               <input
                 type="text"
                 placeholder="First name"
@@ -244,7 +278,9 @@ function Signup() {
               <button
                 type="submit"
                 className="signupSubmitbtn"
-                // onClick={handleSignupButton}
+                onClick={() => {
+                  formValidate();
+                }}
               >
                 Get Started
               </button>
@@ -266,6 +302,9 @@ function Signup() {
             </h1>
           </div>
         </div>
+      </div>
+      <div>
+        <Toaster />
       </div>
     </section>
   );
