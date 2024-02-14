@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faGoogle } from "@fortawesome/free-solid-svg-icons";
 import "./Home.css";
 
 function Home() {
@@ -16,20 +18,16 @@ function Home() {
     navigate("/login");
   };
 
+  const handleClaimBtn = () => {
+    navigate("/login");
+  };
+
   return (
     <section className="HomeSection">
       <div className="mainDiv">
         <div className="Navbar">
           <div className="NavbarLeft">
-            <p className="darkmode">Turn on the Dark mode</p>
-            <label className="switch">
-              <input
-                type="checkbox"
-                checked={isChecked}
-                onChange={enableDarkmood}
-              />
-              <span className="slider round"></span>
-            </label>
+            {/* <FontAwesomeIcon icon={faGoogle} className="googleLogo" /> */}
           </div>
           <div className="NavbarRight">
             <a href="" className="support">
@@ -50,7 +48,9 @@ function Home() {
               in celebration of Black History Month
             </h4>
           </div>
-          <button className="HomeClaimButton">Claim One Month Free Now</button>
+          <button className="HomeClaimButton" onClick={handleClaimBtn}>
+            Claim One Month Free Now
+          </button>
         </div>
       </div>
     </section>

@@ -1,0 +1,21 @@
+{
+  "Signups": [
+    {
+      "id": 1,
+      "name": "test",
+      "email": "test@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "faheem",
+      "email": "faheem@gmail.com"
+    },
+    {
+      "id": "cbb2",
+      "firstName": "faheem",
+      "lastName": "aziz",
+      "email": "faheem@gmail.com",
+      "password": "1234"
+    }
+  ]
+}

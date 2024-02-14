@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
@@ -7,11 +8,51 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import "./Signup.css";
 
 function Signup() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const navigate = useNavigate();
-  const handlelogin = () => {};
-  const handleSignupButton = () => {
+  const handleSignupSubmit = () => {
+    const newUser = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      password: password,
+    };
+
+    axios
+      .post("http://localhost:3000/Signups", newUser)
+      .then((response) => {
+        console.log("a new user added in the json server", response);
+      })
+      .catch((error) => {
+        console.log("error adding a new user in the json server", error);
+      });
     navigate("/dashboard");
   };
+
+  const handleSignupFirstname = (e) => {
+    setFirstName(e.target.value);
+    // console.log(firstName);
+  };
+
+  const handleSignuplastname = (e) => {
+    setLastName(e.target.value);
+    // console.log(lastName);
+  };
+
+  const handleSignupEmail = (e) => {
+    setEmail(e.target.value);
+    // console.log(email);
+  };
+
+  const handleSignupPassword = (e) => {
+    setPassword(e.target.value);
+    // console.log(password);
+  };
+
   return (
     <section>
       <div className="signUpmaindiv">
@@ -175,31 +216,39 @@ function Signup() {
             <div className="SignupHeadingDiv">
               <h1>Create Your Account</h1>
             </div>
-            <form onSubmit={handlelogin} className="signupForm">
+            <form onSubmit={handleSignupSubmit} className="signupForm">
               <input
                 type="text"
                 placeholder="First name"
+                onChange={handleSignupFirstname}
                 className="firstnameInput"
               />
               <input
                 type="text"
                 placeholder="Second name"
+                onChange={handleSignuplastname}
                 className="secondnameInput"
               />
-              <input type="email" placeholder="Email" className="emailInput" />
+              <input
+                type="email"
+                placeholder="Email"
+                className="emailInput"
+                onChange={handleSignupEmail}
+              />
               <input
                 type="password"
                 placeholder="Password"
+                onChange={handleSignupPassword}
                 className="passwordInput"
               />
+              <button
+                type="submit"
+                className="signupSubmitbtn"
+                // onClick={handleSignupButton}
+              >
+                Get Started
+              </button>
             </form>
-            <button
-              type="submit"
-              className="signupSubmitbtn"
-              onClick={handleSignupButton}
-            >
-              Get Started
-            </button>
           </div>
         </div>
 
