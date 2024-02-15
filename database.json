@@ -1,16 +1,6 @@
 {
   "Signups": [
     {
-      "id": 1,
-      "name": "test",
-      "email": "test@gmail.com"
-    },
-    {
-      "id": 2,
-      "name": "faheem",
-      "email": "faheem@gmail.com"
-    },
-    {
       "id": "cbb2",
       "firstName": "faheem",
       "lastName": "aziz",
@@ -18,25 +8,18 @@
       "password": "1234"
     },
     {
-      "id": "3814",
-      "firstName": "",
-      "lastName": "aziz",
-      "email": "faheem@gmail.com",
-      "password": "1234"
+      "id": "6a88",
+      "firstName": "new",
+      "lastName": "user",
+      "email": "newuser@gmail.com",
+      "password": "123456789890"
     },
     {
-      "id": "bdc2",
-      "firstName": "faheem",
-      "lastName": "faheem",
-      "email": "aziz@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "8f68",
-      "firstName": "faheem",
-      "lastName": "aziz",
-      "email": "faheem@gmail.com",
-      "password": "123456789"
+      "id": "0efb",
+      "firstName": "new",
+      "lastName": "user",
+      "email": "newuser@gmail.com",
+      "password": "123456789890"
     }
   ]
 }

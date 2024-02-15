@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { setUserInLocalStorageSignup } from "../../../Utils/localStorage";
 import "./Signup.css";
 
 function Signup() {
@@ -14,8 +15,8 @@ function Signup() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const navigate = useNavigate();
+
   const formValidate = () => {
     if (
       firstName === "" ||
@@ -44,6 +45,12 @@ function Signup() {
               .post("http://localhost:3000/Signups", newUser)
               .then((response) => {
                 console.log("A new user added in the JSON server", response);
+                setUserInLocalStorageSignup(
+                  firstName,
+                  lastName,
+                  email,
+                  password
+                );
                 navigate("/dashboard");
               })
               .catch((error) => {
@@ -250,7 +257,13 @@ function Signup() {
             <div className="SignupHeadingDiv">
               <h1>Create Your Account</h1>
             </div>
-            <form className="signupForm">
+            <form
+              className="signupForm"
+              onSubmit={(e) => {
+                e.preventDefault();
+                formValidate();
+              }}
+            >
               <input
                 type="text"
                 placeholder="First name"
