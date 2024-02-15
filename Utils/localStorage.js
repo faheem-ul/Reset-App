@@ -7,3 +7,7 @@ export const setUserInLocalStorageSignup = (firstname, lastname, email, password
     }
     localStorage.setItem("SignupUser", JSON.stringify(newUser))
 }
+
+export const removeUserFromLocalStorageSignup = () => {
+    localStorage.removeItem("SignupUser")
+}

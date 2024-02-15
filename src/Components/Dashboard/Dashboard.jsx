@@ -8,6 +8,7 @@ import {
   faGooglePlay,
   faSlack,
 } from "@fortawesome/free-brands-svg-icons";
+import { removeUserFromLocalStorageSignup } from "../../../Utils/localStorage";
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ function Dashboard() {
     navigate("/login");
   };
   const logoutBtn = () => {
-    localStorage.removeItem("token");
+    removeUserFromLocalStorageSignup("SignupUser");
     navigate("/login");
   };
   return (
