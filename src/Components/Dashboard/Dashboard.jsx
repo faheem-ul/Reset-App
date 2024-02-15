@@ -9,6 +9,7 @@ import {
   faSlack,
 } from "@fortawesome/free-brands-svg-icons";
 import { removeUserFromLocalStorageSignup } from "../../../Utils/localStorage";
+import { removeUserFromLocalStorageLogin } from "../../../Utils/localStorage";
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ function Dashboard() {
   };
   const logoutBtn = () => {
     removeUserFromLocalStorageSignup("SignupUser");
+    removeUserFromLocalStorageLogin("LoginUser");
     navigate("/login");
   };
   return (
