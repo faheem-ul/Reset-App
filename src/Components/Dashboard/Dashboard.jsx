@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Dashboard.css";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,6 +13,7 @@ import { removeUserFromLocalStorageLogin } from "../../../Utils/localStorage";
 
 function Dashboard() {
   const navigate = useNavigate();
+  // const { id } = useParams();
   const previewImage = () => {};
   const handleIosBtn = () => {
     navigate("/login");
@@ -22,6 +23,7 @@ function Dashboard() {
     removeUserFromLocalStorageLogin("LoginUser");
     navigate("/login");
   };
+
   return (
     <section className="dashboard">
       <div className="Navbar">

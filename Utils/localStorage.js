@@ -1,3 +1,5 @@
+
+
 export const setUserInLocalStorageSignup = (firstname, lastname, email, password) => {
     const newUser = {
         firstname,
@@ -7,6 +9,7 @@ export const setUserInLocalStorageSignup = (firstname, lastname, email, password
     }
     localStorage.setItem("SignupUser", JSON.stringify(newUser))
 }
+
 
 export const removeUserFromLocalStorageSignup = () => {
     localStorage.removeItem("SignupUser")
@@ -19,3 +22,8 @@ export const setUserInLocalStorageLogin = (LoginUser)=>{
 export const removeUserFromLocalStorageLogin = () => {
     localStorage.removeItem("LoginUser")
 }
+
+
+// export const getUserFromLocalStorageSignup = () => {
+//     return JSON.parse(localStorage.getItem("SignupUser"))
+// }

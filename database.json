@@ -20,6 +20,20 @@
       "lastName": "user",
       "email": "newuser@gmail.com",
       "password": "123456789890"
+    },
+    {
+      "id": "faae",
+      "firstName": "test",
+      "lastName": "user",
+      "email": "test@gmail.com",
+      "password": "1234567890"
+    },
+    {
+      "id": "28b3",
+      "firstName": "test",
+      "lastName": "user",
+      "email": "test@gmail.com",
+      "password": "1234567890"
     }
   ]
 }

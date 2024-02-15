@@ -1,21 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { setUserInLocalStorageLogin } from "../../../Utils/localStorage";
+// import { AuthContext } from "../../../Context/AuthContext";
 import "./Login.css";
 
 function Login() {
   const [LoginEmail, setLoginEmail] = useState("");
   const [LoginPassword, setLoginPassword] = useState("");
   const navigate = useNavigate();
+  // const { user } = useContext(Auth);
   const handleLoginEmailInput = (e) => {
     setLoginEmail(e.target.value);
   };
   const handleLoginPasswordInput = (e) => {
     setLoginPassword(e.target.value);
   };
-  const formValidateLogin = async () => {
+  const formValidateLogin = () => {
     if (
       LoginEmail === "" ||
       LoginPassword === "" ||
@@ -24,7 +26,7 @@ function Login() {
     ) {
       toast.error("Please fill all the fields");
     } else {
-      await axios
+      axios
         .get(
           `http://localhost:3000/Signups?email=${LoginEmail}&&password=${LoginPassword}`
         )
@@ -42,6 +44,7 @@ function Login() {
         });
     }
   };
+
   return (
     <section>
       <div className="loginmaindiv">
