@@ -6,28 +6,25 @@ body{
 }
 .Navbar{
     display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
-    justify-content: baseline;
+    justify-content: space-between; 
+    /* justify-content: center; */
+    /* justify-content: space-evenly; */
+    /* justify-content: baseline; */
+    /* margin-top: 100px; */
 }
 .NavbarLeft, .NavbarRight{
-    display: flex;
-    justify-content: center;
+    display: flex;   
+    /* justify-content: center; */
     align-items: center;
+    margin-top: 50px;
+    /* justify-content: baseline; */
 }
 
 .NavbarLeft{
-    margin-right: 780px;
+    margin-left: 1000px;
 }
-
-.NavbarRight{
-  margin-top: 30px;
-}
-
 
 .support{
-
-    margin-right: 150px;
     font-size: 16px;
     font-weight: 500;
     color:#ffffff;
@@ -52,6 +49,7 @@ body{
 }
 
 .HomeMainHeading{
+    text-align: center;
     width: 700px;
     color:#ffffff;
     line-height:112px;
@@ -71,12 +69,14 @@ body{
 }
 
 .homepara{
+    text-align: center;
     margin-top: -60px;
-    margin-left: -80px;
+    /* margin-left: -80px; */
     color:#ffffff;
     text-shadow: 3px 3px 3px rgba(1, 1, 1, 0.5); 
     font-weight: 400;
 }
+
 
 
 .HomeClaimButton, .HomeloginButton{
@@ -84,17 +84,93 @@ body{
     color: white;
     border: none;
     border-radius: 10px;
-    padding: 10px;
+    padding: 15px;
     width: 400px;
     font-size: 20px;
     font-weight: bolder;
     cursor: pointer;
-    margin-left: -100px; 
 }
 
- .HomeloginButton{
- padding:12px ;
-width: 150px;
+.HomeClaimButton{
+    text-align: center;
+}
+
+
+
+.HomeloginButton {
+    /* margin: 0px; */
+    padding: 10px;
+    width: 150px;
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    .HomeSection{
+        /* margin: 0px; */
+        height: 100vh;
+        /* background-image: url(E:\React\reset-app\src\Pictures\home-cover-photo.jpg); */
+        background-size: cover;
+        background-position: center;
+        /* background-attachment: fixed; */
+        background-repeat: no-repeat;
+        
+    }
+   .mainDiv .Navbar {
+        /* flex-direction: column; */
+        /* align-items: center; */
+        /* margin-top: 50px; */
+        margin-bottom: -238px;
+    }
+
+    /* .NavbarRight{
+        margin-left:20px ;
+    } */
+
+    .NavbarLeft{
+        margin-left: 0px;
+    }
+    
+
+    /* .support {
+        margin-right: 0;
+        margin-top: 10px;
+    } */
+
+    .HomeMainHeading {
+        width: 300px;
+        font-weight:600;
+        font-size:40px ;
+        line-height: 50px;
+        margin-left: 50px;
+        /* height: 150px; */
+       
+        /* margin-top: -300px; */
+    }
+
+
+    .homepara {
+        margin:0px;
+        margin-top: -10px;
+        text-align: center;
+    }
+
+    .HomeloginButton{
+        width: 100%;
+        /* margin-left: 140px; */
+    }
+
+    .HomeClaimButton {
+        width: 300px;
+        margin-top: 30px;
+        /* margin-left: 60px; */
+        margin-left: 0px;
+        font-weight: 600;
+    }
+    
+    
+
+    
 }
 
 

@@ -93,11 +93,8 @@ function Dashboard() {
                 </div>
                 <div className="horizontalLine"></div>
                 <div className="Height">
-                  <div>
+                  <div className="accountpassword">
                     <p>Password:</p>
-                  </div>
-                  <div>
-                    <p></p>
                   </div>
                 </div>
               </div>
@@ -114,7 +111,7 @@ function Dashboard() {
               <div className="PlanDetails">
                 <div className="paymentMethod">
                   <div>
-                    <p>
+                    <p className="plandetailsPlan">
                       12 months:{" "}
                       <span className="PlanSpan">&#x2022; A big Deal</span>
                     </p>
@@ -169,7 +166,7 @@ function Dashboard() {
 
                 <div className="Goal">
                   <div>
-                    <p>Goals:</p>
+                    <p className="profileGoal">Goals:</p>
                   </div>
                   <div>
                     <p></p>
@@ -218,7 +215,7 @@ function Dashboard() {
 
                 <div className="Email">
                   <div>
-                    <p>Email:</p>
+                    <p className="paymentmethodEmail">Email:</p>
                   </div>
                   <div>
                     <p></p>

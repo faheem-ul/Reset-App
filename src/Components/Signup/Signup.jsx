@@ -106,7 +106,9 @@ function Signup() {
             <p className="signupPara">
               You already have an account{" "}
               <Link>
-                <Link to="/login">Login</Link>
+                <Link to="/login">
+                  <p className="LoginSpan">Login</p>
+                </Link>
               </Link>
             </p>
           </div>
@@ -303,13 +305,13 @@ function Signup() {
 
         <div className="leftSide">
           <div className="welcomeloginDiv">
-            <h1>
-              <Link to="/" className="WelcomeLink" id="welcome">
+            <h1 className="welcomeSignupLink">
+              <Link to="/" className="WelcomeSignupLink" id="welcome">
                 WELCOME TO
               </Link>
             </h1>
-            <h1>
-              <Link to="/" className="toReset">
+            <h1 className="reset">
+              <Link to="/" className="SignuptoReset">
                 RESET
               </Link>
             </h1>

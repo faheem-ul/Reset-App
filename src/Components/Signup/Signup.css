@@ -10,6 +10,13 @@ body{
     background-color: #000000;
 
 }
+.LoginSpan{
+  display: inline;
+    text-decoration: none;
+    text-decoration: underline;
+--tw-text-opacity: 1;
+color: rgb(255 117 101/var(--tw-text-opacity));
+}
 
 .rightSide{
 /* 
@@ -153,21 +160,22 @@ margin-top: -20px;
     font-weight: 500;
  }
 
-.WelcomeLink{
+.WelcomeSignupLink{
 text-shadow: 5px 5px 8px #000000;
 color: rgb(255, 255, 255);
 font-size: 50px;
-margin-left: 100px;
+text-align: center;
 font-weight: bolder;
+text-decoration: none;
 }
 
-.toReset {
+.SignuptoReset {
     text-decoration: none;
     color: #201111;
     -webkit-text-stroke: 1px #fff;
     text-shadow: 20px 20px 25px #fff;
     font-size: 100px;
-    margin-left: 120px;
+    text-align: center;
 
 }
 
@@ -230,14 +238,61 @@ font-weight: bolder;
 
 }
 
-/* .div1,
-.div2 {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  cursor: pointer;
+
+@media only screen and (max-width: 768px) {
+
+  .signUpmaindiv{
+      /* display: block; */
+      flex-direction: column-reverse;
+      /* background-color: #000000; */
+  }
+
+  .SignupmainHeading{
+    margin-top: 100px;
+  }
+  .rightSide{
+      /* display: flex; */
+      /* justify-content: center; */
+      /* align-items: center; */
+      /* flex-direction: column; */
+      /* color: white; */
+      overflow-y: none;
+      width: auto;
+      max-height: none;
+      /* max-height: auto; */
+      /* width: 500px; */
+      
+  }
+
+  .welcomeLink{
+      margin-top: 150px;
+      margin-right: 90px;
+  }
+
+  .reset{
+      margin-top: -40px;
+  }
+  /* .welcomeloginDiv h1{
+   margin-bottom: 100px;
+  } */
+
+  .signUpmaindiv .leftSide{
+     /* width: 500px; */
+     height: 50vh;
+     /* background-image: url(E:\React\reset-app\src\Pictures\pexels-ketut-subiyanto-5037345.jpg); */
+     /* background-size: cover; */
+     width: auto;
+ }
+
+ 
+ .welcomeLink{
+  margin-top: 150px;
+  margin-right: 90px;
 }
 
-.hidden {
-  display: none;
-} */
+.reset{
+  margin-top: -40px;
+}
+ 
+
+}

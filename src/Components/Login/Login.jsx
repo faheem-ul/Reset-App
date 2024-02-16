@@ -57,7 +57,9 @@ function Login() {
             <p className="loginPara">
               You don't have an account{" "}
               <Link>
-                <Link to="/signup">Sign Up</Link>
+                <Link to="/signup">
+                  <p className="signupSpan">Sign Up</p>
+                </Link>
               </Link>
             </p>
           </div>
@@ -97,13 +99,13 @@ function Login() {
 
         <div className="leftSide">
           <div className="welcomeloginDiv">
-            <h1>
-              <Link to="/" className="WelcomeLink" id="welcome">
+            <h1 className="LoginwelcomeLink">
+              <Link to="/" className="LoginWelcomeLink" id="welcome">
                 WELCOME TO
               </Link>
             </h1>
-            <h1>
-              <Link to="/" className="toReset">
+            <h1 className="reset">
+              <Link to="/" className="LogintoReset">
                 RESET
               </Link>
             </h1>

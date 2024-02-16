@@ -1,6 +1,4 @@
-/* .dashboard {
-    background-color: #000000;
-} */
+
 body{
     background-color: #000000;
     font-family: poppins;
@@ -140,6 +138,7 @@ body{
 }
 
 
+
 /* .cardsmainDiv{
     display: flex;
    flex-wrap:wrap;
@@ -151,6 +150,7 @@ body{
 .Heading{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     color: #fff;
 }
 
@@ -158,6 +158,7 @@ body{
     display: flex;
     flex-direction: column;
     margin: 50px;
+    
     /* font-weight: 700; */
 }
 .PlanDiv{
@@ -168,27 +169,14 @@ body{
     background-color: #000000;
   color: #ff7565;
     border: none;
-    margin-left: 120px;
+    margin-right:50px ;
     margin-top: 10px;
     cursor: pointer;
     font-size: 16px;
        font-weight: 700
 }
 
-.Accountedit{
-    margin-left: 150px;
-}
-.ProfileEdit{
-    margin-left: 220px;
-}
 
-.PaymentEdit{
-    margin-left: 90px;
-}
-
-.PlanEdit{
-    margin-left: 200px;
-}
 
 .Payment, .MyAccount, .Myplan, .Profile {
     font-weight: 700;
@@ -232,3 +220,77 @@ body{
     width: 380px;
     margin-left: 20px;
 }
+
+
+
+@media only screen and (max-width: 768px) {
+  
+    .Navbar {
+      /* flex-direction: column; */
+      /* align-items: center; */
+      margin: 0px 50px 0px 75px;
+      /* justify-content: center; */
+      align-items: center;
+    }
+
+    .dashboardMainDiv {
+        margin-top: 7px;
+    
+    }
+
+    .downloadTheAppDiv{
+      margin-top: -26px;  
+    }
+  
+    .logo {
+      margin-top: 10px; 
+    }
+  
+    .logoutBtn {
+      margin-top: 0px; 
+      font-weight: 900;
+      font-size: large;
+    }
+
+  .ProfileandPaymentDivsFlex, .AccountandPlanDivsFelx{
+    display:flex ;
+    flex-direction: column;
+  }
+
+  .AccountDiv, .ProfileDiv, .PaymentDiv, .PlanDiv {
+    margin-bottom: 10px;
+    width: 370px;
+    /* margin-left: 100px; */
+
+  }
+
+
+  
+.PaymentDetails, .ProfileDetails, .AccountDetails, .PlanDetails{
+    width:auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Payment, .MyAccount, .Myplan, .Profile {
+   
+    margin-left: 15px;
+}
+
+.Accountedit, .ProfileEdit, .PaymentEdit, .PlanEdit{
+
+    margin-right: 50px;
+}
+
+
+.horizontalLine{
+            width: 320px;
+            margin-left: 10px;
+}
+
+
+
+}
+
+
+

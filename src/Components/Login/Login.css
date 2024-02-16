@@ -17,34 +17,52 @@ body{
  flex-direction: column;
  color: white;
  width: 1000px;
+ 
 }
 
 .leftSide{
      display: flex;
- justify-content: center;
- align-items: center;
- flex-direction: column;
-    width: 1000px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 100vh;
     background-image: url(E:\React\reset-app\src\Pictures\pexels-ketut-subiyanto-5037345.jpg);
     background-size: cover;
+    width: 1000px;
 }
 
 
 
-.WelcomeLink{
+.LoginWelcomeLink{
+    display: flex;
+    justify-content: center;
+
+    text-shadow: 5px 5px 8px #000000;
     text-decoration: none;
+color: rgb(255, 255, 255);
+font-size: 50px;
+font-weight: bolder;
 }
 
-.toReset {
+.LogintoReset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
     text-decoration: none;
     color: #201111;
     -webkit-text-stroke: 1px #fff;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5); 
+    text-shadow: 20px 20px 25px #fff;
     font-size: 100px;
-    margin-left: 120px;
 }
 
+.signupSpan{
+    display: inline;
+    text-decoration: none;
+    text-decoration: underline;
+--tw-text-opacity: 1;
+color: rgb(255 117 101/var(--tw-text-opacity));
+}
 
 .mainHeading{
     font-size: xxx-large;
@@ -53,23 +71,49 @@ body{
 }
 
 .loginPara{
-   color: #8d9dbc;
-    font-weight: bold;
+    --tw-text-opacity: 1;
+    font-weight: 600;
+    font-size: 16;
     line-height: 18px;
-  }
-
+    color: rgb(141 157 188/var(--tw-text-opacity));
+}
+   
+  
 
 
 .loginForm input {
-    background-color:#465a7e;
+    --tw-bg-opacity: 1;
+    background-color: rgb(22 22 38/var(--tw-bg-opacity)); 
     padding: 20px;
     width: 300px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: none;
     display: block;
     margin: 10px;
-
+    transition: border-color 0.3s ease;
 }
+ 
+/* .emailInput:focus {
+    border-color: #fff; 
+}
+
+.emailInput:not(:placeholder-shown) {
+    border-color: #28A745;
+} */
+
+textarea:focus, input:focus {
+    color: #ffffff;
+    font-size: medium;
+    font-weight: bold;
+    background-color: rgb(22 22 38/var(--tw-bg-opacity)); 
+    /* outline: none; */
+}
+
+input, select, textarea{
+     color: rgb(152 167 195/var(--tw-text-opacity));
+     font-weight: 600;
+}
+
 
 .loginSubmitbtn{
     background-color:#ff7565;
@@ -83,5 +127,54 @@ body{
     font-size: 20px;
     font-weight: bolder;
     cursor: pointer;
+   
+
 
 }
+
+@media only screen and (max-width: 768px) {
+
+    .loginmaindiv{
+        /* display: block; */
+        flex-direction: column-reverse;
+        height: 100vh;
+        /* background-color: #000000; */
+    }
+
+    .rightSide{
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* flex-direction: column; */
+        color: white;
+        width: auto;
+        /* width: 500px; */
+        
+    }
+
+  
+
+    .reset{
+        text-align: center;
+        margin-left: 30px;
+    }
+    /* .welcomeloginDiv h1{
+     margin-bottom: 100px;
+    } */
+
+    .loginmaindiv .leftSide{
+       /* width: 500px; */
+       height: 50vh;
+       /* background-image: url(E:\React\reset-app\src\Pictures\pexels-ketut-subiyanto-5037345.jpg); */
+       /* background-size: cover; */
+       width: auto;
+   }
+
+   .mainHeading{
+    margin-right: 150px;
+    margin-top: 50px;
+   }
+   
+   
+  
+  }
