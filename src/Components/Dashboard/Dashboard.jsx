@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import "./Dashboard.css";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
+import playstoreSvg from "../../assets/playstore.svg";
+import appleStoreSvg from "../../assets/applestore.svg";
 import {
   faApple,
   faGooglePlay,
@@ -10,19 +12,39 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { removeUserFromLocalStorageSignup } from "../../../Utils/localStorage";
 import { removeUserFromLocalStorageLogin } from "../../../Utils/localStorage";
+// import { AuthContext } from "../../Context/Auth";
 
 function Dashboard() {
   const navigate = useNavigate();
+  const [localstorageuser, setlocalstorageuser] = useState(null);
+  console.log("data from the state", localstorageuser);
+  // const { user } = useContext(AuthContext);
+
+  // console.log(user);
   // const { id } = useParams();
+  useEffect(() => {
+    const loginUserFromStorage = JSON.parse(localStorage.getItem("LoginUser"));
+    // console.log("login user from storage:", loginUserFromStorage.email);
+    setlocalstorageuser(loginUserFromStorage);
+  }, []);
+
   const previewImage = () => {};
   const handleIosBtn = () => {
-    navigate("/login");
+    navigate("/");
   };
   const logoutBtn = () => {
     removeUserFromLocalStorageSignup("SignupUser");
     removeUserFromLocalStorageLogin("LoginUser");
-    navigate("/login");
+    navigate("/");
   };
+
+  // useEffect(() => {
+  //   const loginUserFromStorage = JSON.parse(localStorage.getItem("LoginUser"));
+  //   console.log(
+  //     loginUserFromStorage,
+  //     "this is the login user seen in dashboard"
+  //   );
+  // }, []);
 
   return (
     <section className="dashboard">
@@ -41,11 +63,16 @@ function Dashboard() {
         <div className="imageInputDiv">
           <label htmlFor="imageInput" className="uploadButton">
             <span className="cameraicon">
-              <FontAwesomeIcon icon={faCamera} />{" "}
+              <FontAwesomeIcon style={{ marginTop: "15px" }} icon={faCamera} />{" "}
             </span>
             <span className="addIcon">&#43;</span>
           </label>
-          <input type="file" id="imageinput" onChange={previewImage} />
+          <input
+            accept="image"
+            type="file"
+            id="imageinput"
+            onChange={previewImage}
+          />
         </div>
         <p className="WelcomeTrial">Welcome, trial</p>
         <div className="downloadTheAppDiv">
@@ -56,17 +83,15 @@ function Dashboard() {
         </div>
 
         <div className="AndroidIosBtnDiv">
-          <div className="IosBtnDiv">
+          <div>
             <button className="iosButton" onClick={handleIosBtn}>
-              <FontAwesomeIcon icon={faApple} className="iosFont" /> Available
-              on <span className="fontspan">App Store</span>
+              <img src={appleStoreSvg} alt="apple svg is here" />
             </button>
           </div>
 
           <div className="androidBtnDiv">
             <button className="androidButton" onClick={handleIosBtn}>
-              <FontAwesomeIcon icon={faGooglePlay} className="androidFont" />{" "}
-              Get it on <span className="fontspanandroid">Play Store</span>
+              <img src={playstoreSvg} alt="Android svg is here" />
             </button>
           </div>
         </div>
@@ -88,13 +113,16 @@ function Dashboard() {
                     <p>Email:</p>
                   </div>
                   <div>
-                    <p></p>
+                    <p>{localstorageuser?.email}</p>
                   </div>
                 </div>
                 <div className="horizontalLine"></div>
                 <div className="Height">
                   <div className="accountpassword">
                     <p>Password:</p>
+                  </div>
+                  <div>
+                    <p>{localstorageuser?.password}</p>
                   </div>
                 </div>
               </div>
@@ -116,7 +144,7 @@ function Dashboard() {
                       <span className="PlanSpan">&#x2022; A big Deal</span>
                     </p>
                   </div>
-                  <div>
+                  <div style={{ backgroundColor: "red" }}>
                     <p></p>
                   </div>
                 </div>
@@ -167,9 +195,6 @@ function Dashboard() {
                 <div className="Goal">
                   <div>
                     <p className="profileGoal">Goals:</p>
-                  </div>
-                  <div>
-                    <p></p>
                   </div>
                 </div>
               </div>

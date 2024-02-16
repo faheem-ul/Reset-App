@@ -18,12 +18,15 @@ body{
 }
 
 .logoutBtn{
+    line-height: 24px;
     background-color: #000000;
     color:#ffffff;
     margin-top: 30px;
       border: none;
       cursor: pointer;
-      font-weight: 700;
+      font-size: 16px;
+
+      font-weight: 400;
     /* margin-left: -100px; */
 }
 
@@ -102,7 +105,7 @@ body{
     background-color: #ff7565;
     color: white;
     border: none;
-    width: 130px;
+    /* width: 130px; */
     margin: 10px;
     border-radius: 10px;
     height: 50px;
@@ -134,7 +137,7 @@ body{
     display:flex ;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+
 }
 
 
@@ -161,9 +164,7 @@ body{
     
     /* font-weight: 700; */
 }
-.PlanDiv{
-    margin-bottom: 110px;
-}
+
 
 .Accountedit, .ProfileEdit, .PaymentEdit, .PlanEdit{
     background-color: #000000;
@@ -184,7 +185,7 @@ body{
 
 .PaymentDetails, .ProfileDetails, .AccountDetails, .PlanDetails{
     width: 400px;
-    height: 300px;
+    height: auto;
     background-color: #161626;
     text-align: start;
     color:#ffffff;
@@ -195,20 +196,21 @@ body{
     padding: 10px;
 }
 
-.AccountDetails{
+/* .AccountDetails{
     height: 140px;
-}
+} */
 
-.PlanDetails{
+/* .PlanDetails{
     height: 80px;
-}
+} */
 
 .cardNmbr, .paymentMethod, .ExpiryDate, .Email, .Age, .Height, .Weight, .Goal{
-    margin: 30px;
+    margin-left: 10px;
+    margin-right:10px ;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
 }
 
 .PlanSpan{
@@ -216,9 +218,9 @@ body{
 }
 
 .horizontalLine{
-    border-top: 1px solid #ccc; 
+    border-top: 0.5px solid #ccc; 
     width: 380px;
-    margin-left: 20px;
+    margin: 10px;
 }
 
 
@@ -258,8 +260,10 @@ body{
   }
 
   .AccountDiv, .ProfileDiv, .PaymentDiv, .PlanDiv {
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    
     width: 370px;
+    margin: 10px;
     /* margin-left: 100px; */
 
   }

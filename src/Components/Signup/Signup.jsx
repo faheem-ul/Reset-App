@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { Toaster, toast } from "react-hot-toast";
+
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { setUserInLocalStorageSignup } from "../../../Utils/localStorage";
+
 import "./Signup.css";
 
 function Signup() {
@@ -25,14 +28,14 @@ function Signup() {
       password === "" ||
       password.length < 8
     ) {
-      toast.error("Please fill in all fields");
+      toast("Please fill in all fields");
     } else {
       axios
         .get(`http://localhost:3000/Signups?email=${email}`)
         .then((response) => {
           console.log(response.data);
           if (response.data.length > 0) {
-            alert("Email already exists. Please use a different email.");
+            toast("Email already exists. Please use a different email.");
           } else {
             const newUser = {
               firstName: firstName,
@@ -318,9 +321,8 @@ function Signup() {
           </div>
         </div>
       </div>
-      <div>
-        <Toaster />
-      </div>
+      <ToastContainer />
+      <div></div>
     </section>
   );
 }

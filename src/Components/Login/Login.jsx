@@ -5,7 +5,8 @@ import axios from "axios";
 import { setUserInLocalStorageLogin } from "../../../Utils/localStorage";
 // import { AuthContext } from "../../../Context/AuthContext";
 import "./Login.css";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function Login() {
   const [LoginEmail, setLoginEmail] = useState("");
   const [LoginPassword, setLoginPassword] = useState("");
@@ -36,7 +37,7 @@ function Login() {
             setUserInLocalStorageLogin(response.data[0]);
             return navigate("/dashboard");
           } else {
-            return alert("Email or Password is incorrect");
+            return toast.error("Email or Password is incorrect");
           }
         })
         .catch((error) => {
@@ -112,6 +113,7 @@ function Login() {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 }
